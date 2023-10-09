@@ -2,7 +2,7 @@ package com.hillel.homeworks.lesson_01;
 import com.hillel.homeworks.Utils;
 
 public class Lesson_01_Basics {
-	private static String lessonName = "Lesson_01_Basics".replace('_', ' ').toUpperCase();
+	private static String LESSON_NAME = "Lesson_01_Basics".replace('_', ' ').toUpperCase();
 	private static final String TASK01 = "Print number for 1 to 100 performing next conditions:\r\n"
 			+ "	  1. If number multiple 3, print instead of number word hello\r\n"
 			+ "	  2. If number multiple 5, print instead of number word World\r\n"
@@ -13,7 +13,7 @@ public class Lesson_01_Basics {
 
 	public static void run() {
 		Utils utils = new Utils();
-		System.out.println(Utils.wrapMessage(lessonName, true,'*','*', '*'));
+		System.out.println(Utils.wrapMessage(LESSON_NAME, true,'*','*', '*'));
 		utils.execute(TASK01, Lesson_01_Basics::task01);
 		utils.execute(TASK02, Lesson_01_Basics::task02);
 		utils.execute(TASK03, Lesson_01_Basics::task03);

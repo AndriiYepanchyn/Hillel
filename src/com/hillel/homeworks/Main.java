@@ -7,6 +7,7 @@ import com.hillel.homeworks.lesson_04.Lesson_04_Implementing_DataStructures;
 import com.hillel.homeworks.lesson_05.Lesson_05_Basic_algorithm_tasks;
 import com.hillel.homeworks.lesson_06.Lesson_06_Tasks_with_HashMap;
 import com.hillel.homeworks.lesson_07.Lesson_07_Tasks_with_Arrays_DataTime_Sorting_Collections;
+import com.hillel.homeworks.lesson_08.Lesson_08_Trees;
 
 /*
  * @Author: Andrii Yepanchyn
@@ -25,7 +26,8 @@ public class Main {
 //        Lesson_04_Implementing_DataStructures.run();
 //        Lesson_05_Basic_algorithm_tasks.run();
 //        Lesson_06_Tasks_with_HashMap.run();
-        Lesson_07_Tasks_with_Arrays_DataTime_Sorting_Collections.run();
+//        Lesson_07_Tasks_with_Arrays_DataTime_Sorting_Collections.run();
+        Lesson_08_Trees.run();
 
     }
 }
