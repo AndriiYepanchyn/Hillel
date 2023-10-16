@@ -5,6 +5,12 @@ import java.util.Scanner;
 public class Utils implements Executor<String, Runnable> {
 	public static int DEFAULT_LINE_LENGHT = 85;
 
+	/**
+	* This method wrap in one task description and method which proceed the solution.
+	*
+	* @param description - contains the task condition and supportive information.
+	* @param method  - method which will proceed the solution.
+	 */
 	public void execute(String description, Runnable method) {
 		String taskNumber = method.getClass().getName();
 		taskNumber = taskNumber.substring(taskNumber.lastIndexOf('$') + 1, taskNumber.lastIndexOf('/'));
@@ -16,6 +22,9 @@ public class Utils implements Executor<String, Runnable> {
 		System.out.println(wrapMessage(endOfTask, false, '=', '=', '\u0000'));
 	}
 
+	/**
+	 * This method allow to add pause between tasks, which can be interrupted by pressing any key.
+	 */
 	public static void endOfTest() {
 		System.out.println("Press any key");
 		Scanner voidscan = new Scanner(System.in);
