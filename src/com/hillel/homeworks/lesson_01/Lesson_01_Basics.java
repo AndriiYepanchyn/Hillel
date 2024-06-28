@@ -45,7 +45,7 @@ public class Lesson_01_Basics {
             middleValue = middleValue + array[i];
         }
         System.out.println();
-        System.out.println("Middle Value = " + (middleValue / 10));		
+        System.out.println("Middle Value = " + (middleValue / size));		
 	}
 	
 	private static void task03() {
