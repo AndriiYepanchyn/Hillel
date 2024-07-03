@@ -1,8 +1,12 @@
 \.idea
 \.metadata
 \bin
-\fff
 \src\oldTasks
+\src\resources
+\src\test
 \.gitignore.bak
+\target
+\POM-rec.XML
+\.settings
 
 
