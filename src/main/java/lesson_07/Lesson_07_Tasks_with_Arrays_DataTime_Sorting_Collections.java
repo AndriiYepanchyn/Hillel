@@ -37,7 +37,7 @@ public class Lesson_07_Tasks_with_Arrays_DataTime_Sorting_Collections {
     }
 
 
-    @SuppressWarnings("unused")
+
 	private static void task01() {
     	int[][] arrayToSort = createArray();
     	int[] flatArray = Arrays.stream(arrayToSort)
@@ -191,16 +191,23 @@ public class Lesson_07_Tasks_with_Arrays_DataTime_Sorting_Collections {
 	private static int[][] createArray() {
 		int dimentionN; //rows
 		int dimentionM; //Columns
-		Scanner newScan = new Scanner(System.in);
+		int[][] randomArray = null;
+		try(
+		Scanner newScan = new Scanner(System.in)){
 		System.out.println("Inpurt N dimention:...");
 		dimentionN = newScan.nextInt();
 		System.out.println("Inpurt M dimention:...");
 		dimentionM = newScan.nextInt();
-		int[][] randomArray = new int[dimentionN][dimentionM];
+
+		randomArray = new int[dimentionN][dimentionM];
 		for (int i = 0; i < dimentionN; i++) {
 			for (int j = 0; j < dimentionM; j++) {
 				randomArray[i][j] = (int) (Math.random() * 100);
 			}
+		}
+		
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 		return randomArray;
 	}

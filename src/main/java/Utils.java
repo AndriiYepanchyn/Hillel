@@ -27,8 +27,11 @@ public class Utils implements Executor<String, Runnable> {
 	 */
 	public static void endOfTest() {
 		System.out.println("Press any key");
-		Scanner voidscan = new Scanner(System.in);
-		String myString = voidscan.nextLine();
+		try (Scanner voidscan = new Scanner(System.in)) {
+			voidscan.nextLine();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -67,7 +70,6 @@ public class Utils implements Executor<String, Runnable> {
 			message = message.substring(index, message.length());
 		}
 		if (message.length() < len - 4) {
-			int spacesTotal = len - message.length() - 2;
 			String before = signInLine + " ";
 			String after = " ".repeat(len - message.length() - 3) + signInLine + "\n";
 			answer.append(before + message + after);

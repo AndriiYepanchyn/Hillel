@@ -30,50 +30,59 @@ public class Lesson_05_Basic_algorithm_tasks {
 
     private static void task01() {
         System.out.println("Enter route for Robot");
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner = new Scanner(System.in)){;
         String input = scanner.nextLine();
         System.out.println("You entered next route for Robot:  " + input);
         String r = convertRoute(input);
         System.out.println("Robot route is converted for:   " + r + "\n");
         System.out.println("Will Robot come back?  " + isRoboBack(r) + "\n");
+        } catch(Exception e) {
+        	e.printStackTrace();
+        }
     }
 
     private static void task02() {
-        int inputInt = 0;
-        Scanner scanner = new Scanner(System.in);
-        while (inputInt <= 1) {
-            System.out.println("Enter int number >1");
-            inputInt = scanner.nextInt();
-        }
+		int inputInt = 0;
+		try (Scanner scanner = new Scanner(System.in)) {
+			while (inputInt <= 1) {
+				System.out.println("Enter int number >1");
+				inputInt = scanner.nextInt();
+			}
 
-        if (isNumberSimple(inputInt)) {
-            System.out.println(inputInt + " is simple.");
-        } else {
-            System.out.println(inputInt + " is complicated, it divides on:\n");
-            System.out.println(dividers.toString());
-        }
-
-    }
+			if (isNumberSimple(inputInt)) {
+				System.out.println(inputInt + " is simple.");
+			} else {
+				System.out.println(inputInt + " is complicated, it divides on:\n");
+				System.out.println(dividers.toString());
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
     private static void task03() {
         int[] inArray = {1, 2, 3, 4};
         System.out.print(Arrays.toString(inArray));
         System.out.println();
         System.out.println("Input search value");
-        Scanner scanner = new Scanner(System.in);
+        try(Scanner scanner = new Scanner(System.in)){
         int inputInt = scanner.nextInt();
         System.out.println(binarySearch(inArray, inputInt));
+        }
 
     }
 
     private static void task04() {
-        System.out.println("Input string");
-        Scanner scanner = new Scanner(System.in);
-        String inputString = scanner.nextLine();
-        ArrayList<String> outputList = new ArrayList<>();
-        findPermutations(inputString, outputList);
-        System.out.println("Permutations: "+ outputList);
-    }
+		System.out.println("Input string");
+		try (Scanner scanner = new Scanner(System.in)) {
+			String inputString = scanner.nextLine();
+			ArrayList<String> outputList = new ArrayList<>();
+			findPermutations(inputString, outputList);
+			System.out.println("Permutations: " + outputList);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
     //      Helpers for the  task01
     static boolean isRoboBack(String r) {

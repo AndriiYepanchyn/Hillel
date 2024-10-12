@@ -18,7 +18,6 @@ public class Lesson_08_Trees {
 	}
 
 	private static void task01() {
-		int[] ordinals = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, };
 		for (int i = 2; i < 20; i++) {
 			System.out.println(i + "th element of the Fibonnachy Row is:  " + fibonachyOrdinal(i));
 		}
@@ -113,7 +112,4 @@ public class Lesson_08_Trees {
 
 		return fibonachy.get(fibonachy.size() - 1);
 	}
-
-	
-
 }

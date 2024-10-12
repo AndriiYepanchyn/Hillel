@@ -300,8 +300,6 @@ public class BinarySearchTreeNode {
 	
 //	+
 	public String toString() {
-		String leftStr = left == null? "null" : left.value.toString();
-		String rightStr = right == null? "null" : right.value.toString();
 		return "[" + value + "]";
 	}
 }
